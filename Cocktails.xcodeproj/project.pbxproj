@@ -14,6 +14,8 @@
 		A632CEF528BE25AC00B8BEAE /* CocktailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A632CEF428BE25AC00B8BEAE /* CocktailsTests.swift */; };
 		A632CEFF28BE25AC00B8BEAE /* CocktailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A632CEFE28BE25AC00B8BEAE /* CocktailsUITests.swift */; };
 		A632CF0128BE25AC00B8BEAE /* CocktailsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A632CF0028BE25AC00B8BEAE /* CocktailsUITestsLaunchTests.swift */; };
+		A6A800D228C4F10900FE6D61 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A6A800D128C4F10900FE6D61 /* Alamofire */; };
+		A6FFCDA728C4F2EA00DD348A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A6FFCDA628C4F2EA00DD348A /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FFCDA728C4F2EA00DD348A /* Kingfisher in Frameworks */,
+				A6A800D228C4F10900FE6D61 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,7 @@
 		A632CEE228BE25AB00B8BEAE /* Cocktails */ = {
 			isa = PBXGroup;
 			children = (
+				A632CF0D28BE27E100B8BEAE /* Core */,
 				A632CEE328BE25AB00B8BEAE /* CocktailsApp.swift */,
 				A632CEE528BE25AB00B8BEAE /* ContentView.swift */,
 				A632CEE728BE25AC00B8BEAE /* Assets.xcassets */,
@@ -127,6 +132,29 @@
 			path = CocktailsUITests;
 			sourceTree = "<group>";
 		};
+		A632CF0D28BE27E100B8BEAE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A6FFCDA928C4F76D00DD348A /* Service */,
+				A6FFCDA828C4F74100DD348A /* Manager */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A6FFCDA828C4F74100DD348A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A6FFCDA928C4F76D00DD348A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +171,10 @@
 			dependencies = (
 			);
 			name = Cocktails;
+			packageProductDependencies = (
+				A6A800D128C4F10900FE6D61 /* Alamofire */,
+				A6FFCDA628C4F2EA00DD348A /* Kingfisher */,
+			);
 			productName = Cocktails;
 			productReference = A632CEE028BE25AB00B8BEAE /* Cocktails.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +247,10 @@
 				Base,
 			);
 			mainGroup = A632CED728BE25AB00B8BEAE;
+			packageReferences = (
+				A6A800D028C4F10900FE6D61 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A6FFCDA528C4F2EA00DD348A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = A632CEE128BE25AB00B8BEAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +619,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A6A800D028C4F10900FE6D61 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A6FFCDA528C4F2EA00DD348A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A6A800D128C4F10900FE6D61 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6A800D028C4F10900FE6D61 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A6FFCDA628C4F2EA00DD348A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6FFCDA528C4F2EA00DD348A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A632CED828BE25AB00B8BEAE /* Project object */;
 }
